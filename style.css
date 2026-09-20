@@ -1,0 +1,551 @@
+/* ==========================================================================
+   BGS HOMESTAY STYLESHEET - LUXURY WARM WOOD THEME (COMPLETE COMPOSITION)
+   ========================================================================== */
+
+/* ATURAN DASAR RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f4; /* Stone-50 */
+    color: #292524; /* Stone-800 */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* KOTAK LAYOUT UTAMA */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-stone-100 {
+    background-color: #e7e5e4;
+}
+
+/* 1. NAVIGATION BAR STYLING */
+.navbar {
+    background-color: #1c1917; /* Cokelat Kayu/Batu Gelap */
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-menu a {
+    color: #d6d3d1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #fbbf24; /* Amber Gold */
+}
+
+.btn-nav-chat {
+    background-color: #f59e0b;
+    color: #0c0a09 !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+}
+
+.btn-nav-chat:hover {
+    background-color: #d97706;
+}
+
+/* 2. HERO SECTION STYLING */
+.hero-section {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Membuat efek gulir paralaks yang elegan */
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #0c0a09 40%, rgba(28, 25, 23, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.hero-badge {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    max-width: 750px;
+}
+
+.hero-title span { color: #fbbf24; }
+
+.hero-desc {
+    color: #d6d3d1;
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 36px;
+    font-weight: 300;
+}
+
+.hero-btn-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #f59e0b;
+    color: #0c0a09;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #d97706;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 3. HIGHLIGHT PANEL (INFO SEWA) */
+.highlight-panel {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    border-radius: 20px;
+    border: 1px solid rgba(231, 229, 228, 0.6);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    margin-top: -130px; /* Tarik melayang memotong spanduk hero */
+    overflow: hidden;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 30;
+}
+
+.panel-item {
+    padding: 28px;
+    border-right: 1px solid #f5f5f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.panel-item:last-child { border-right: none; }
+.panel-item.special { background-color: rgba(254, 243, 199, 0.5); }
+
+.panel-label {
+    color: #a8a29e;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.panel-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1c1917;
+}
+
+.panel-sub {
+    font-size: 14px;
+    font-weight: normal;
+    color: #78716c;
+}
+
+/* Judul Konten Standar */
+.section-title {
+    text-align: center;
+    margin-bottom: 48px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title h2 { font-size: 32px; color: #1c1917; margin-bottom: 12px; }
+.section-title p { color: #78716c; font-size: 16px; }
+
+/* 4. GRID FASILITAS FULL FURNISHED */
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+/* GAYA JUDUL UNIT GALERI */
+.galeri-header-unit {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-left: 5px solid #f59e0b; /* Aksen Amber Gold */
+    padding-left: 14px;
+    text-align: left;
+}
+
+.galeri-header-unit h3 {
+    font-size: 22px;
+    color: #1c1917;
+    font-weight: 700;
+}
+
+.galeri-header-unit p {
+    font-size: 14px;
+    color: #78716c;
+}
+
+/* TAUTAN GAMBAR SPESIFIK RUMAH 1 (UNIT K-05) */
+.r1-living { background-image: url('img/bgs1/ruang tv.jpeg'); }
+.r1-bedroom { background-image: url('img/bgs1/kamar utama.jpeg'); }
+.r1-kitchen { background-image: url('img/bgs1/dapur.jpeg'); }
+.r1-kids { background-image: url('img/bgs1/kamar bawah.jpeg'); }
+.r1-bathroom { background-image: url('img/bgs1/kamar atas.jpeg'); }
+.r1-exterior { background-image: url('img/bgs1/depan.jpeg'); }
+.r1-minibar { background-image: url('img/bgs1/ruang tamu.jpeg'); }
+.r1-kmbawah { background-image: url('img/bgs1/ruang makan.jpeg'); }
+.r1-kmatas { background-image: url('img/bgs1/km atas.jpeg'); }
+
+/* TAMBAHAN GAMBAR LOKAL RUMAH 2 (UNIT K-08) */
+.r2-kids { background-image: url('img/bgs2/Kamar bawah1.jpg'); }
+.r2-bathroom { background-image: url('img/bgs2/Kamar mandi atas.jpg'); }
+.r2-exterior { background-image: url('img/bgs2/depan.jpg'); }
+.r2-living { background-image: url('img/bgs2/Ruang tamu.jpg'); }
+.r2-bedroom { background-image: url('img/bgs2/Kamarutama.jpg'); }
+.r2-kitchen { background-image: url('img/bgs2/Dapur.jpg'); }
+.r2-minibar { background-image: url('img/bgs2/Minibar.jpg'); }
+.r2-kmbawah { background-image: url('img/bgs2/Kamar atas1.jpg'); }
+.r2-kmatas { background-image: url('img/bgs2/Kamar mandi bawah.jpg'); }
+
+.facility-card {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid rgba(231, 229, 228, 0.6);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.icon-box {
+    background-color: #fef3c7;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 24px;
+    height: 54px;
+    width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.facility-card h4 { font-size: 18px; color: #1c1917; margin-bottom: 6px; font-weight: 600; }
+.facility-card p { color: #78716c; font-size: 14px; }
+
+/* 5. ARSITEKTUR SECTION GALERI INTERIOR (BARU) */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.galeri-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(231, 229, 228, 0.6);
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s;
+}
+
+.galeri-card:hover {
+    transform: translateY(-6px);
+}
+
+.galeri-img {
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Memasang tautan visual stok kamar premium huni */
+.img-living { background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80'); }
+.img-bedroom { background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80'); }
+.img-kitchen { background-image: url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'); }
+
+.galeri-info {
+    padding: 24px;
+}
+
+.galeri-info h4 {
+    font-size: 18px;
+    color: #1c1917;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.galeri-info p {
+    color: #78716c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 5. SEJAJAR GRIDS DOUBLE GOOGLE MAPS */
+.maps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .maps-grid {
+        grid-template-columns: repeat(2, 1fr); /* Sejajar Samping di Laptop */
+    }
+}
+
+.map-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(231, 229, 228, 0.6);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.map-card h4 { font-size: 18px; color: #1c1917; margin-bottom: 8px; font-weight: 700; }
+.map-card p.map-addr { font-size: 14px; color: #78716c; margin-bottom: 20px; min-height: 45px; }
+
+/* MAP RESPONSIVE CONTAINER (16:9) */
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; 
+    border-radius: 16px;
+    border: 1px solid #e7e5e4;
+    margin-bottom: 20px;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.btn-map {
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.btn-map:hover { background-color: #2563eb; }
+
+/* 6. FORM RESERVASI DOCK */
+.booking-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(231, 229, 228, 0.6);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label { font-size: 14px; font-weight: 600; color: #44403c; }
+
+.form-group input, .form-group select {
+    padding: 14px;
+    border: 1px solid #d6d3d1;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fafaf9;
+    outline: none;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #f59e0b;
+    background-color: #ffffff;
+}
+
+.total-box {
+    background-color: #f5f5f4;
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-left: 6px solid #f59e0b;
+}
+
+.total-label { font-weight: 600; color: #1c1917; font-size: 16px; }
+.total-price { font-size: 28px; font-weight: 800; color: #b45309; }
+
+.btn-submit-wa {
+    background-color: #10b981;
+    color: #ffffff;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-submit-wa:hover { background-color: #059669; }
+
+/* OTA COMPONENT */
+.ota-section {
+    background-color: #1c1917;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.ota-section .section-title h2 { color: #ffffff; }
+.ota-section .section-title p { color: #a8a29e; }
+
+.ota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.ota-card {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid #e7e5e4;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.ota-card:hover { transform: translateY(-4px); }
+.logo-agoda { color: #2563eb; font-size: 26px; font-weight: 800; }
+.logo-traveloka { color: #06b6d4; font-size: 26px; font-weight: 800; }
+.badge-link { font-size: 13px; background-color: #f5f5f4; padding: 6px 16px; border-radius: 50px; color: #57534e; }
+/* FOOTER TERMINAL */
+footer {background-color: #0c0a09;color: #a8a29e;padding: 48px 0;font-size: 14px;border-top: 1px solid #1c1917;}
+.footer-flex {display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;gap: 24px;}
+footer h4 { color: #ffffff; margin-bottom: 6px; }
+
+/* MOBILE RESPONSIVE ADAPTATION */
+@media (max-width: 768px) {.nav-menu { display: none; }.hero-title { font-size: 32px; }.section-title h2 { font-size: 26px; }.highlight-panel { margin-top: -40px; }.section-padding { padding: 50px 0; }}
